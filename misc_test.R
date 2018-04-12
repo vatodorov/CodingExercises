@@ -10,8 +10,11 @@ lcfs <- read.csv("/Users/valentint/Downloads/LCF2013.csv")
 p <- ggplot(data = lcfs, aes(x = Gorx, y = P344pr))
 
 # Boxplots
-p + geom_boxplot() + coord_flip()
+p + geom_boxplot() +
+  coord_flip()
 
 # Boxplots with data points
-p + geom_boxplot() + coord_flip() + geom_jitter(width = 0.07, aes(colour = "blue"))
+p + geom_boxplot() +
+  coord_flip() +
+  geom_jitter(width = 0.09, aes(colour = Gorx))
 
