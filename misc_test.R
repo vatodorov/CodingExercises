@@ -16,5 +16,6 @@ p + geom_boxplot() +
 # Boxplots with data points
 p + geom_boxplot() +
   coord_flip() +
-  geom_jitter(width = 0.09, aes(colour = Gorx))
-
+  geom_jitter(width = 0.09, aes(colour = Gorx)) +
+  stat_summary(fun.y = mean, colour = "darkred", geom = "point", 
+             shape = 18, size = 3)
